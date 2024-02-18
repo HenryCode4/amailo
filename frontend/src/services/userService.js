@@ -15,7 +15,13 @@ export const getUser = () =>
         localStorage.removeItem('user')
     };
 
+    export const register = async registerData => {
+        const {data} = await axios.post('api/users/register', registerData);
+        localStorage.setItem('user', JSON.stringify(data));
+        return data;
+    }
+
     export const userService = {
-        getUser, login, logout,
+        getUser, login, logout, register
     }
     

@@ -8,13 +8,16 @@ import './axiosConfig';
 import { AuthProvider } from './hooks/useAuth';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import { LoadingProvider } from './hooks/useLoading';
+import './interceptors/authInterceptor';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <AuthProvider>
+    <LoadingProvider>
+      <AuthProvider>
       <CartProvider>
       <App />
       <ToastContainer
@@ -31,6 +34,8 @@ root.render(
       />
     </CartProvider>
     </AuthProvider>
+    </LoadingProvider>
+    
     </BrowserRouter>
   </React.StrictMode>
 );

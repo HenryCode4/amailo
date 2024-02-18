@@ -10,7 +10,7 @@ const Thumbnails = ({foods}) => {
             foods.map((food)=> (
                 <li key={food.id}>
                     <Link to={`/food/${food.id}`}>
-                        <img className='image object-cover h-[14.5rem] ' src={`/foods/${food.imageUrl}`} alt={food.name} />
+                        <img className='image object-cover h-[14.5rem] ' src={`${food.imageUrl}`} alt={food.name} />
                     
 
                     <div className='content mt-[0.3rem] py-[0.5rem] px-[1rem] relative h-[7rem] '>

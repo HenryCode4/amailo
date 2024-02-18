@@ -24,7 +24,9 @@ export const AuthProvider = ({ children }) => {
       setUser(user);
       toast.success('Register Successful');
     } catch (err) {
-      toast.error(err.response.data);
+      // Check if err.response exists before accessing its data property
+      const errorMessage = err.response?.data || 'An error occurred';
+      toast.error(errorMessage);
     }
   };
 
