@@ -1,10 +1,11 @@
 import { Router } from "express";
 import handler from 'express-async-handler'
-import { FoodModel } from "../models/foodsotre.model";
+import FoodModel from "../models/food.model";
 
 
 
-// import { sample_foods } from "../data";
+
+
 
 const router = Router();
 

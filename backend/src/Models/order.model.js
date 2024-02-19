@@ -1,6 +1,6 @@
 import { model, Schema } from 'mongoose';
 import { OrderStatus } from '../constants/orderStatus.js';
-import { FoodModel } from './foodsotre.model.js';
+import { FoodModel } from './food.model.js';
 
 
 export const LatLngSchema = new Schema(

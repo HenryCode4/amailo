@@ -1,6 +1,6 @@
-import { model, Schema } from 'mongoose';
+const { Schema, model } = require('mongoose');
 
-export const FoodSchema = new Schema(
+const FoodSchema = new Schema(
   {
     name: { type: String, required: true },
     price: { type: Number, required: true },
@@ -22,4 +22,6 @@ export const FoodSchema = new Schema(
   }
 );
 
-export const FoodModel = model('food', FoodSchema);
+const FoodModel = model('Food', FoodSchema);
+
+module.exports = FoodModel;
