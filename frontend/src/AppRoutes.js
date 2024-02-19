@@ -35,7 +35,7 @@ export default function AppRoutes() {
         <Route path='/profile' element={<AuthRoute>
             <ProfilePage />
         </AuthRoute>} />
-        <Route path='/orders' element={<AuthRoute>
+        <Route path='/orders/:filter?' element={<AuthRoute>
             <OrdersPage />
         </AuthRoute>} />
     </Routes>
